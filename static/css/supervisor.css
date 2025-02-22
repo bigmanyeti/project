@@ -1,9 +1,12 @@
+/* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Dashboard Layout */
 .teacher-dashboard {
     display: flex;
     height: 100vh;
@@ -11,55 +14,142 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
-    background-color: #9b59b6;
+    width: 1000px;
+    background-color: #5B2C6F;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-logo {
+    width: 120px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    width: 100%;
+    background-color: #8E44AD;
+    color: white;
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #7D3C98;
 }
 
 .signout-btn {
-    background-color: red;
+    background-color: #E74C3C;
+    font-weight: bold;
+}
+
+.signout-btn:hover {
+    background-color: #C0392B;
+}
+
+/* Main Content */
+.main-content {
+  width:100%;
+    flex-grow: 1;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Project Container */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     padding: 10px;
+}
+
+/* Project Card */
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #5B2C6F;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.project-card button {
+    background: #E74C3C;
     color: white;
     border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
+.project-card button:hover {
+    background: #C0392B;
 }
 
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.project-card {
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px gray;
-}
-
+/* Floating Add Button */
 .add-project-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #8e44ad;
+    bottom: 30px;
+    right: 30px;
+    background-color: #6C3483;
     color: white;
     font-size: 2rem;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
+.add-project-btn:hover {
+    background-color: #5B2C6F;
+    transform: scale(1.1);
+}
+
+/* Popup */
 .popup {
     position: fixed;
     top: 0;
@@ -73,7 +163,71 @@ body {
 }
 
 .popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 300px;
 }
+
+.popup-content h3 {
+    font-size: 1.4rem;
+    color: #5B2C6F;
+    margin-bottom: 10px;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.popup-content button {
+    background: #8E44AD;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.popup-content button:hover {
+    background: #6C3483;
+}
+
+.cancel-btn {
+    background: #E74C3C !important;
+}
+
+.cancel-btn:hover {
+    background: #C0392B !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .teacher-dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 80%;
+    }
+
+    .main-content {
+      width:100%
+        padding: 20px;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        width: 90;
+    }
+}
+

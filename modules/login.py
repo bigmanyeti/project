@@ -5,8 +5,8 @@ def create_database():
     try:
         connection = mysql.connector.connect(
             host='localhost',  # e.g., 'localhost'
-            user='GenJi',  # e.g., 'root'
-            password='okg00gle>'
+            user='utsav',  # e.g., 'root'
+            password='1234'
         )
         
         if connection.is_connected():
@@ -28,8 +28,8 @@ def save_user_to_db(gmail, password, username, role):
         # Connect to the MySQL database
         connection = mysql.connector.connect(
             host='localhost',  # e.g., 'localhost'
-            user='GenJi',  # e.g., 'root'
-            password='okg00gle>',
+            user='utsav',  # e.g., 'root'
+            password='1234',
             database='insync'
         )
 

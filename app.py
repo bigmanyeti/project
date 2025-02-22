@@ -45,8 +45,8 @@ def login():
     try:
         connection = mysql.connector.connect(
             host='localhost',
-            user='GenJi',
-            password='okg00gle>',
+            user='utsav',
+            password='1234',
             database='insync'
         )
 
