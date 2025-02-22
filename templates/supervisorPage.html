@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/supervisor.css') }}">
+</head>
+<body>
+
+    <div class="teacher-dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="logo-text">InSync</h1>
+            <img src="InSyncLogo.jpeg" alt="Logo" class="sidebar-logo">
+            <button onclick="fetchProjects()">Project List</button>
+            <button class="signout-btn" onclick="signOut()">Sign Out</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2 class="title">Projects</h2>
+            <div class="project-container" id="projectContainer"></div>
+
+            <!-- Floating Add Button -->
+            <button class="add-project-btn" onclick="showPopup()">+</button>
+        </main>
+    </div>
+
+    <!-- Project Code Input Popup -->
+    <div id="popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <h3>Enter Project Details</h3>
+            <input type="text" id="projectName" placeholder="Project Name">
+            <input type="text" id="year" placeholder="Year">
+            <input type="text" id="semester" placeholder="Semester">
+            <input type="text" id="department" placeholder="Department">
+            <button onclick="addProject()">Add Project</button>
+            <button class="cancel-btn" onclick="hidePopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/supervisor.js') }}"></script>
+</body>
+</html>

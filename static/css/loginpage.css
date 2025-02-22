@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assests/images/ku-main.jpg') no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.mainLogo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mainLogo h1 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.mainLogo img {
+    height: 250px;
+    margin-bottom: -20px;
+}
+
+.wrapper {
+    width: 400px;
+    background: rgba(36, 46, 73, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+}
+
+.wrapper h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: transparent;
+    color: #fff;
+}
+
+.input-box input::placeholder {
+    color: #ddd;
+}
+
+.input-box i,
+.input-box img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.signUp {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signUp a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signUp a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #e6b800;
+}
+
+.popup, .login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+.popup-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.popup-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    background: #ff4b5c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: #e04352;
+}

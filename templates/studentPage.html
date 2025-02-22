@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/studentPage.css')}}">
+</head>
+<body>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="logo-text">InSync</h1>
+            <img src="logo.png" alt="Logo" class="sidebar-logo">
+            <button class="sidebar-btn" onclick="addProject()">Add New Project</button>
+            <button class="sidebar-btn" onclick="viewProjects()">Your Projects</button>
+            <button class="sidebar-btn">Tasks</button>
+            <button class="signout-btn">Sign Out</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2 class="title">Your Projects</h2>
+            <div class="project-card">
+                <p>No projects yet.</p>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comment-section">
+                <h3>Comments</h3>
+                <input type="text" id="commentInput" placeholder="Add a comment...">
+                <button class="post-btn" onclick="postComment()">Post</button>
+                <ul id="commentList"></ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
